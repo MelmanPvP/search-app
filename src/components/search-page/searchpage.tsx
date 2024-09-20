@@ -25,8 +25,8 @@ export default function SearchPage (){
         { id: 14, title: 'Gourmet Burgers at Home', description: 'Upgrade your burgers with these gourmet ingredients and ideas...' },
         { id: 15, title: 'Quick and Easy Snacks', description: 'Snacks you can make in minutes for a quick bite...' },
     ];
-  const [search,setSearch]=useState(['']);
-  const [results, setResults] = useState<ResultType[]>([]);
+  const [search,setSearch]=useState<string>('');
+    const [results, setResults] = useState<ResultType[]>([]);
     const [isBanner1,setBanner1]=useState(true)
     const [isBanner2,setBanner2]=useState(false)
     const [isClicked,setClicked] = useState(false)
@@ -83,7 +83,7 @@ export default function SearchPage (){
             <div className={css.results}>
             {(results.length > 0 && isClicked) ? (
                     results.map(result => (
-                        <Result title={result.title} description={result.description}
+                        <Result key={result.id} title={result.title} description={result.description}
                                 font={currentFont}/>
                     ))
                 ) : (isClicked) ? (

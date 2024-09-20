@@ -1,14 +1,15 @@
 import css from './result.module.scss'
-interface ResultProps {
 
+interface ResultProps {
     title: string,
     description: string,
-    font: string;
+    font: string,
+    key?: number
 }
 
-export default function Result({ title, description , font }: ResultProps) {
+export default function Result({title, description, font,  key}: ResultProps) {
     return (
-        <div className={css.card} style={{ fontFamily: font }}>
+        <div className={css.card} key={key} style={{fontFamily: font}}>
             <h2 className={css.title}>{title}</h2>
             <p className={css.description}>{description}</p>
         </div>
