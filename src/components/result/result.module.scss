@@ -1,0 +1,23 @@
+.card{
+  background: white;
+  width: 800px;
+  height: 100px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  gap:10px;
+  border-radius: 10px;
+  @media screen and (max-width: 768px) {
+    width: 500px;
+  }
+}
+.title{
+  margin-left: 30px;
+}
+.description{
+  //align-content: center;
+  //margin-left: 50px;
+  margin-top: -10px;
+  margin-left: 30px;
+}
