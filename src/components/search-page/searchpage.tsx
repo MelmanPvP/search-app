@@ -83,7 +83,7 @@ export default function SearchPage (){
             <div className={css.results}>
             {(results.length > 0 && isClicked) ? (
                     results.map(result => (
-                        <Result title={result.title} description={result.description}
+                        <Result key={result.id} title={result.title} description={result.description}
                                 font={currentFont}/>
                     ))
                 ) : (isClicked) ? (
