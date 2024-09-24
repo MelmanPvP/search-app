@@ -91,7 +91,7 @@ export default function SearchPage (){
                 <h1 className={css.title}>Googleplex</h1>
                 <div className={css.searchbar}>
                     <button className={css.switch} onClick={Switch}>Switch banner</button>
-                    <input placeholder="Search for food..."
+                    <input placeholder="Search for food or videogames..."
                            value={search}
                            onChange={event => setSearch(event.target.value)}
                            className={css.input}/>
