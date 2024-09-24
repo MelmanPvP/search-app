@@ -64,9 +64,9 @@ export default function SearchPage (){
             setResults(mockFoodResults);
         }
         else if (search.toLowerCase() === 'videogames') {
-            setResults(mockFoodResults);
+            setResults(mockGameResults);
         } else {
-            setResults([]); 
+            setResults([]);
         }
     };
     useEffect(() => {
