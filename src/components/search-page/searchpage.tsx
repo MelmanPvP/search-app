@@ -73,7 +73,6 @@ export default function SearchPage (){
         // This will run every time `isBanner1` is updated
         console.log(' Now displaying:', isBanner1 ? 'Banner 1' : 'Banner 2');
     }, [isBanner1]);  // Dependency on `isBanner1` // Re-run the effect when banners are toggled
-    console.log('Search for food or videogames')
     return (
         <div>
             <div className={css.banners}>
@@ -92,7 +91,7 @@ export default function SearchPage (){
                 <h1 className={css.title}>Googleplex</h1>
                 <div className={css.searchbar}>
                     <button className={css.switch} onClick={Switch}>Switch banner</button>
-                    <input placeholder="Open console"
+                    <input placeholder="Search for food or videogames"
                            value={search}
                            onChange={event => setSearch(event.target.value)}
                            className={css.input}/>
