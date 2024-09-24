@@ -1,4 +1,4 @@
 # Link to deploy: https://search-app-eight-chi.vercel.app/
-# 1 страница: постер + кнопка для перехода на страницу 2
+# Page 1: poster + button with link to page 2
 
-# 2 страница: поисковик с получением mock данных и возможностью переключаться между шрифтами нажатием кнопки
+# page 2: search engine with mock results and button that allows you yo switch between 2 fonts
