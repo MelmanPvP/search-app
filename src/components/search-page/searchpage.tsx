@@ -8,7 +8,7 @@ interface ResultType {
     description: string;
 }
 export default function SearchPage (){
-    const mockResults: ResultType[] = [
+    const mockFoodResults: ResultType[] = [
         { id: 1, title: 'Best Receipts for Burgers', description: 'Burgers are one of the most popular fast food items...' },
         { id: 2, title: 'Tasty Pizza Ideas', description: 'Explore various pizza recipes with unique toppings...' },
         { id: 3, title: 'How to Make Delicious Pasta', description: 'Pasta is a versatile and easy dish to cook at home...' },
@@ -24,6 +24,23 @@ export default function SearchPage (){
         { id: 13, title: 'Perfecting BBQ Ribs', description: 'Master the art of BBQ with this step-by-step guide to ribs...' },
         { id: 14, title: 'Gourmet Burgers at Home', description: 'Upgrade your burgers with these gourmet ingredients and ideas...' },
         { id: 15, title: 'Quick and Easy Snacks', description: 'Snacks you can make in minutes for a quick bite...' },
+    ];
+    const mockGameResults: ResultType[] = [
+        { id: 1, title: 'Top 10 RPGs of All Time', description: 'Explore the greatest role-playing games with deep stories and engaging gameplay...' },
+        { id: 2, title: 'Best Open-World Games', description: 'Dive into these immersive open-world games that let you explore vast environments...' },
+        { id: 3, title: 'How to Master First-Person Shooters', description: 'Learn advanced strategies to dominate in competitive first-person shooter games...' },
+        { id: 4, title: 'Best Indie Games You Should Play', description: 'Discover hidden indie gems that provide fresh and innovative gaming experiences...' },
+        { id: 5, title: 'Top Survival Horror Games', description: 'Survive terrifying environments and enemies in these top-rated survival horror games...' },
+        { id: 6, title: 'Ultimate Fighting Games Guide', description: 'Unleash your inner fighter with these fast-paced and competitive fighting games...' },
+        { id: 7, title: 'Building the Perfect Gaming PC', description: 'A complete guide to building a powerful PC for an optimal gaming experience...' },
+        { id: 8, title: 'Best Multiplayer Games of the Year', description: 'Team up with friends or compete against others in these top multiplayer games...' },
+        { id: 9, title: 'The Evolution of Console Gaming', description: 'Take a look at the history and evolution of consoles from the past to the present...' },
+        { id: 10, title: 'Fastest Speedrun Records', description: 'Check out the fastest times and records set by speedrunners across popular games...' },
+        { id: 11, title: 'How to Get Started in Esports', description: 'Learn how to break into the world of competitive gaming and esports...' },
+        { id: 12, title: 'Best Platformers to Play', description: 'Jump, run, and explore in these fun and challenging platforming games...' },
+        { id: 13, title: 'Top Virtual Reality Games', description: 'Step into the future with these immersive VR experiences that push the boundaries of gaming...' },
+        { id: 14, title: 'Retro Games That Defined the Industry', description: 'Go back in time and relive the golden age of gaming with these classic retro titles...' },
+        { id: 15, title: 'Guide to Free-to-Play Games', description: 'Enjoy these highly-rated free-to-play games without spending a dime...' },
     ];
   const [search,setSearch]=useState<string>('');
   const [results, setResults] = useState<ResultType[]>([]);
@@ -43,11 +60,13 @@ export default function SearchPage (){
 
     const handleSearch = () => {
         setClicked(true)
-        // If search term is "food", display the mock data
         if (search.toLowerCase() === 'food') {
-            setResults(mockResults);
+            setResults(mockFoodResults);
+        }
+        else if (search.toLowerCase() === 'videogames') {
+            setResults(mockFoodResults);
         } else {
-            setResults([]); // Clear results if no match
+            setResults([]); 
         }
     };
     useEffect(() => {
